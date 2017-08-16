@@ -1,24 +1,19 @@
 import initialState from './initialState';
 import { USER_CHANGE, PASS_CHANGE } from '../actions/actions';
 
+import userReducer from './userReducer';
 
 const mainReducer = (state = initialState(), action) => {
     switch(action.type){
         case USER_CHANGE:
             return {
                 ...state,
-                user: {
-                    username: action.value,
-                    pass: state.user.pass,
-                },
+                user: userReducer(state.user, action)
             };
         case PASS_CHANGE:
             return {
                 ...state,
-                user: {
-                    username: state.user.username,
-                    pass: action.value,
-                },
+                user: userReducer(state.user, action)
             };
         default:
             return state;

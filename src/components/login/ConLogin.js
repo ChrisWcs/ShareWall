@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { createPassChange, createUserChange } from '../../actions/actionCreators';
 import Login from './Login';
 
 const mapStateToProps = (state) => ({
@@ -7,8 +8,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-    userValChange: (event) => {dispatch()}, //event.target.value
-    passValChange: (event) => {dispatch()},
+    userValChange: (event) => {dispatch(createUserChange(event.target.value));}, //event.target.value
+    passValChange: (event) => {dispatch(createPassChange(event.target.value));},
     loginFunc: () => {},
 });
 
