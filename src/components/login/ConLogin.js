@@ -7,8 +7,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-    userValChange: () => {},
-    passValChange: () => {},
+    userValChange: (event) => {dispatch()}, //event.target.value
+    passValChange: (event) => {dispatch()},
     loginFunc: () => {},
 });
 
