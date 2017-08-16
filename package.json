@@ -30,6 +30,8 @@
   "author": "Christian Hansen",
   "license": "MIT",
   "dependencies": {
+    "glamor": "2.20.40",
+    "glamorous": "4.1.2",
     "object-assign": "4.1.0",
     "react": "15.5.4",
     "react-dom": "15.5.4",
