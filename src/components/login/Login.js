@@ -30,7 +30,9 @@ const Login = ({ userVal, passVal, userValChange, passValChange, loginFunc }) =>
 Login.propTypes = {
     userVal: PropTypes.string,
     passVal: PropTypes.string,
-    
+    userValChange: PropTypes.func,
+    passValChange: PropTypes.func,
+    loginFunc: PropTypes.func,  
 };
 
 export default Login;
